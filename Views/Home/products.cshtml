@@ -1,0 +1,77 @@
+﻿@model EnerProf.Models.Category
+@using EnerProf.Models;
+@{
+    ViewBag.Title = "products";
+    Layout = "~/Views/Home/_HomeLayout.cshtml";
+    List<Filters> filters = ViewBag.Filters;
+    
+}
+
+<div class="men-wear">
+    <div class="container">
+        <div class="col-md-4 products-left">
+
+            @Html.Partial("filters", filters)
+            @*<div class="swit form css-treeview">
+                <h4>Компании</h4>
+                    <form>
+                        <div class="check_box"> <div class="radio"> <label><input type="checkbox" name="radio" checked=""><i></i>Enerpac</label> </div></div>
+                        <div class="check_box"> <div class="radio"> <label><input type="checkbox" name="radio"><i></i>Grosby</label> </div></div>
+                        <div class="check_box"> <div class="radio"> <label><input type="checkbox" name="radio"><i></i>IP</label> </div></div>
+                        <div class="check_box"> <div class="radio"> <label><input type="checkbox" name="radio"><i></i>Gunnebo</label> </div></div>
+                        <div class="check_box"> <div class="radio"> <label><input type="checkbox" name="radio"><i></i>Walmag</label> </div></div>
+                        <div class="check_box"> <div class="radio"> <label><input type="checkbox" name="radio"><i></i>Cordstrap</label> </div></div>
+                        <div class="check_box"> <div class="radio"> <label><input type="checkbox" name="radio"><i></i>Tesmec</label> </div></div>
+                    </form>
+                </div>*@
+            <div class="clearfix"></div>
+        </div>
+        <!-- <div class="col-md-8 products-right">
+
+
+            <div class="men-wear-top">
+                <script src="js/responsiveslides.min.js"></script>
+                <script>
+                        $(function () {
+                         // Slideshow 4
+                        $("#slider3").responsiveSlides({
+                            auto: true,
+                            pager: true,
+                            nav: false,
+                            speed: 500,
+                            namespace: "callbacks",
+                            before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function () {
+                            $('.events').append("<li>after event fired.</li>");
+                            }
+                            });
+                        });
+                </script>
+                <div  id="top" class="callbacks_container">
+                    <ul class="rslides" id="slider3">
+                        <li>
+                            <img class="img-responsive" src="images/cul1.png" alt=" "/>
+                        </li>
+                        <li>
+                            <img class="img-responsive" src="images/cul2.png" alt=" "/>
+                        </li>
+                        <li>
+                            <img class="img-responsive" src="images/cul3.png" alt=" "/>
+                        </li>
+                        <li>
+                            <img class="img-responsive" src="images/cul4.png" alt=" "/>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        <div class="clearfix"></div> -->
+        <div class="single-pro" id="products_list">
+            @Html.Partial("CatalogueOfProducts")
+
+
+            </div>
