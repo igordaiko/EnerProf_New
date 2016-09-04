@@ -1,0 +1,22 @@
+﻿@using EnerProf.Models
+@model EnerProf.Models.Product
+
+@{
+    ViewBag.Title = "product";
+    Layout = "~/Views/Home/_HomeLayout.cshtml";
+    List<Model> models = ViewBag.SelectedModels;
+}
+
+@foreach (var item in Model.Models)
+{
+    if (models.Contains(item))
+    {
+        <span style="color:red">@item.Name</span>
+    }
+    else
+    {
+        <span>@item.Name</span>
+    }
+
+}
+
